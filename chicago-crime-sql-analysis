@@ -1,0 +1,38 @@
+# 🚔 Chicago Crime Data Analysis (SQL & Window Functions)
+
+## 📌 Visão Geral do Projeto
+Este projeto consiste numa análise exploratória e temporal dos dados de ocorrências criminais na cidade de Chicago (disponibilizados no Google BigQuery via `bigquery-public-data.chicago_crime.crime`). 
+
+O objetivo principal foi aplicar **Window Functions avançadas em SQL** (`LAG`, `DENSE_RANK`, `SUM() OVER`) para extrair métricas de negócio, identificar tendências históricas e analisar comportamentos acumulados.
+
+---
+
+## 🛠️ Tecnologias e Conceitos Utilizados
+* **Google Cloud BigQuery** (Engine de processamento SQL em escala)
+* **CTE's (Common Table Expressions)** para estruturação de consultas
+* **Window Functions (Funções de Janela):**
+  * `LAG()`: Comparação de métricas Ano a Ano (YoY)
+  * `DENSE_RANK()`: Ranking de categorias mais frequentes sem saltos na pontuação
+  * `SUM() OVER ()`: Cálculo de totais acumulados (Running Total)
+
+---
+
+## 📊 Análises Desenvolvidas
+
+### 1. Variação Ano a Ano do Volume de Crimes (YoY)
+* **Objetivo:** Medir a evolução percentual do total de crimes reportados em relação ao ano anterior.
+* **Ficheiro:** `queries/02_chicago_crime_yoy.sql`
+
+### 2. Ranking dos 5 Crimes Mais Frequentes por Ano
+* **Objetivo:** Classificar a recorrência das tipologias criminais ano a ano usando particionamento e ranking.
+* **Ficheiro:** `queries/03_chicago_crime_top_ranks.sql`
+
+### 3. Soma Cumulativa de Crimes (Running Total)
+* **Objetivo:** Acompanhar a evolução mensal acumulada das ocorrências ao longo de cada ano.
+* **Ficheiro:** `queries/04_chicago_crime_running_total.sql`
+
+---
+
+## 🔗 Links Rápidos
+* 🌐 **Portfólio Profissional:** [isabella-avila.carrd.co](https://isabella-avila.carrd.co)
+* 💼 **LinkedIn:** [Isabella de Ávila](https://www.linkedin.com)
